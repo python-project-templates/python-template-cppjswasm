@@ -1,0 +1,19 @@
+## Pre-requisites
+
+You need Python >=3.10 on your machine to install `python-template-cppjswasm`.
+
+## Install with `pip`
+
+```bash
+pip install python-template-cppjswasm
+```
+
+## Install with `conda`
+
+```bash
+conda install python-template-cppjswasm --channel conda-forge
+```
+
+## Source installation
+
+For other platforms and for development installations, [build `python-template-cppjswasm` from source](Build-from-Source).
