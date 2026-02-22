@@ -141,14 +141,12 @@ js/node_modules
 js/test-results
 js/playwright-report
 js/*.tgz
-python_template_cppjswasm/extension
 
 # Jupyter
 .ipynb_checkpoints
 .autoversion
 Untitled*.ipynb
-!python_template_cppjswasm/extension/python_template_cppjswasm.json
-!python_template_cppjswasm/extension/install.json
+python_template_cppjswasm/extension
 python_template_cppjswasm/nbextension
 python_template_cppjswasm/labextension
 
