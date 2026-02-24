@@ -106,6 +106,7 @@ branch = true
 omit = [
     "python_template_cppjswasm/tests/integration/",
 ]
+
 [tool.coverage.report]
 exclude_also = [
     "raise NotImplementedError",
