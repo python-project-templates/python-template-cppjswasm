@@ -1,0 +1,37 @@
+python_template_cppjswasm
+=========================
+
+.. py:module:: python_template_cppjswasm
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   python_template_cppjswasm.__version__
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_cppjswasm.include_path
+   python_template_cppjswasm.bin_path
+   python_template_cppjswasm.lib_path
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+   :value: '0.1.0'
+
+
+.. py:function:: include_path()
+
+.. py:function:: bin_path()
+
+.. py:function:: lib_path()
+
