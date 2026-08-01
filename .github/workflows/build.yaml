@@ -47,7 +47,7 @@ jobs:
       with:
         version: ${{ matrix.node-version }}
 
-    - uses: actions-ext/cpp/setup@51c484ef64088c62434226039d0e3359f5fc8df6
+    - uses: actions-ext/cpp/setup@c2b1e90366b3a1c628a1df0748135f5e345ab26f
 
     - uses: mymindstorm/setup-emsdk@4528d102f7230f0e7b276855c01ea1159be0e984 # v16
 
