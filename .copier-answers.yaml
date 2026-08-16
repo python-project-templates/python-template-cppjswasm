@@ -1,8 +1,9 @@
 # Changes here will be overwritten by Copier
-_commit: d814faa
+_commit: 8ac03b9
 _src_path: https://github.com/python-project-templates/base.git
 add_docs: true
 add_extension: cppjswasm
+add_pyodide: false
 add_vcpkg: false
 add_wiki: true
 email: 3105306+timkpaine@users.noreply.github.com

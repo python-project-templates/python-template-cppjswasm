@@ -138,6 +138,7 @@ coverage-cpp:  ## run C++ tests and collect test coverage
 
 .PHONY: test coverage tests
 test: test-py test-js test-cpp  ## run all tests
+
 coverage: coverage-py coverage-js coverage-cpp  ## run all tests and collect test coverage
 
 # alias

@@ -143,6 +143,7 @@ python_template_cppjswasm/labextension
 # Emscripten SDK (locally installed)
 emsdk
 
+
 # Mac
 .DS_Store
 
