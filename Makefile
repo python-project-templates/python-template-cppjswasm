@@ -17,9 +17,7 @@ develop: develop-cpp develop-js develop-py  ## setup project for development
 
 .PHONY: requirements-py requirements-js requirements-cpp requirements
 requirements-py:  ## install prerequisite python build requirements
-	python -m pip install --upgrade pip toml
-	python -m pip install `python -c 'import toml; c = toml.load("pyproject.toml"); print("\n".join(c["build-system"]["requires"]))'`
-	python -m pip install `python -c 'import toml; c = toml.load("pyproject.toml"); print(" ".join(c["project"]["optional-dependencies"]["develop"]))'`
+	uv pip install -r pyproject.toml --extra develop
 
 requirements-js:  ## install prerequisite javascript build requirements
 	cd js; pnpm install && npx playwright install
@@ -136,8 +134,13 @@ tests-cpp: test-cpp
 coverage-cpp:  ## run C++ tests and collect test coverage
 	make -C cpp coverage
 
-.PHONY: test coverage tests
+.PHONY: test test-pyodide coverage tests
 test: test-py test-js test-cpp  ## run all tests
+
+test-pyodide:  ## build and test the Python package in Pyodide
+	rm -rf dist/pyodide
+	uvx --from cibuildwheel==4.2.0 cibuildwheel --only cp314-pyodide_wasm32 --output-dir dist/pyodide .
+
 coverage: coverage-py coverage-js coverage-cpp  ## run all tests and collect test coverage
 
 # alias
