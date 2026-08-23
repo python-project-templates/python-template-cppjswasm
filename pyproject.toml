@@ -1,7 +1,11 @@
 [build-system]
 requires = [
     "hatchling",
+<<<<<<< before updating
     "hatch-cpp>=0.3.7",
+=======
+    "hatch-cpp>=0.5.0",
+>>>>>>> after updating
     "hatch-js",
     "pybind11",
 ]
@@ -41,7 +45,11 @@ develop = [
     "check-dist",
     "cibuildwheel",
     "codespell",
+<<<<<<< before updating
     "hatch-cpp>=0.3.7",
+=======
+    "hatch-cpp>=0.5.0",
+>>>>>>> after updating
     "hatch-js",
     "hatchling",
     "pybind11",
@@ -104,6 +112,11 @@ archs = "arm64"
 environment = {SKIP_HATCH_JS="1"}
 skip = "*win32 *arm_64"
 
+[tool.cibuildwheel.pyodide]
+environment = {SKIP_HATCH_JS="1"}
+test-command = "python -m pytest -vvv --pyargs python_template_cppjswasm.tests"
+test-extras = []
+test-requires = ["pytest"]
 [tool.coverage.run]
 branch = true
 omit = [
