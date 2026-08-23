@@ -4,6 +4,15 @@ python_template_cppjswasm
 .. py:module:: python_template_cppjswasm
 
 
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/python_template_cppjswasm/tests/index
+
+
 Attributes
 ----------
 

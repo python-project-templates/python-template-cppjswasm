@@ -1,0 +1,15 @@
+python_template_cppjswasm.tests
+===============================
+
+.. py:module:: python_template_cppjswasm.tests
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/python_template_cppjswasm/tests/test_all/index
+
+
