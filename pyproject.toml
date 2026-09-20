@@ -102,7 +102,7 @@ archs = "arm64"
 
 [tool.cibuildwheel.windows]
 environment = {SKIP_HATCH_JS="1"}
-skip = "*win32 *arm_64"
+skip = "*win32 *arm64"
 
 [tool.cibuildwheel.pyodide]
 environment = {SKIP_HATCH_JS="1"}
