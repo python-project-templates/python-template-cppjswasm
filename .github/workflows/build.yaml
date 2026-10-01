@@ -76,7 +76,7 @@ jobs:
         if: matrix.target == 'native'
 
       - name: Setup C++
-        uses: actions-ext/cpp/setup@22ebafc6f57971978e964f9977333ac98a7c49d9
+        uses: actions-ext/cpp/setup@714ade4ac5622e0a0bdd2c36487e5490787c85b6
 
       - name: Setup Emscripten
         uses: mymindstorm/setup-emsdk@4528d102f7230f0e7b276855c01ea1159be0e984  # v16
