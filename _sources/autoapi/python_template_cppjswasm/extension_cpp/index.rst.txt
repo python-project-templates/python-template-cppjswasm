@@ -1,0 +1,19 @@
+python_template_cppjswasm.extension_cpp
+=======================================
+
+.. py:module:: python_template_cppjswasm.extension_cpp
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_cppjswasm.extension_cpp.add
+
+
+Module Contents
+---------------
+
+.. py:function:: add(i: int, j: int) -> int
+
