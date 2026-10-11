@@ -46,6 +46,7 @@ develop = [
     "hatchling",
     "pybind11",
     "mdformat",
+    "mdformat-frontmatter",
     "mdformat-tables>=1",
     "pytest",
     "pytest-cov",
@@ -113,7 +114,7 @@ test-requires = ["pytest"]
 [tool.coverage.run]
 branch = true
 omit = [
-    "python_template_cppjswasm/tests/integration/",
+    "python_template_cppjswasm/tests/integration/*",
 ]
 
 [tool.coverage.report]
@@ -127,9 +128,6 @@ fail_under = 50
 
 [tool.hatch.build]
 artifacts = [
-    "python_template_cppjswasm/*.dll",
-    "python_template_cppjswasm/*.dylib",
-    "python_template_cppjswasm/*.so",
     "python_template_cppjswasm/extension",
 ]
 
@@ -151,6 +149,7 @@ libraries = [
 ]
 
 [tool.hatch.build.targets.sdist]
+exclude = ["*.dll", "*.dylib", "*.so", "*.pyd"]
 packages = [
     "python_template_cppjswasm",
     "cpp",
@@ -159,6 +158,12 @@ packages = [
 
 
 [tool.hatch.build.targets.wheel]
+artifacts = [
+    "python_template_cppjswasm/*.dll",
+    "python_template_cppjswasm/*.dylib",
+    "python_template_cppjswasm/*.so",
+    "python_template_cppjswasm/extension",
+]
 packages = [
     "python_template_cppjswasm",
 ]
