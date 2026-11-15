@@ -22,6 +22,14 @@ Attributes
    python_template_cppjswasm.__version__
 
 
+Classes
+-------
+
+.. autoapisummary::
+
+   python_template_cppjswasm.Example
+
+
 Functions
 ---------
 
@@ -35,6 +43,12 @@ Functions
 
 Package Contents
 ----------------
+
+.. py:class:: Example(value: str)
+
+   .. py:attribute:: stuff
+      :type:  str
+
 
 .. py:function:: add(i: int, j: int) -> int
 

@@ -4,6 +4,14 @@ python_template_cppjswasm.extension_cpp
 .. py:module:: python_template_cppjswasm.extension_cpp
 
 
+Classes
+-------
+
+.. autoapisummary::
+
+   python_template_cppjswasm.extension_cpp.Example
+
+
 Functions
 ---------
 
@@ -14,6 +22,12 @@ Functions
 
 Module Contents
 ---------------
+
+.. py:class:: Example(value: str)
+
+   .. py:attribute:: stuff
+      :type:  str
+
 
 .. py:function:: add(i: int, j: int) -> int
 
