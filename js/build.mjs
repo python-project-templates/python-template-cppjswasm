@@ -5,6 +5,8 @@ import { node_modules_external } from "./tools/externals.mjs";
 import fs from "fs";
 import cpy from "cpy";
 
+const EXTENSION = "../python_template_cppjswasm/extension";
+
 const BUNDLES = [
   {
     entryPoints: ["src/ts/index.ts"],
@@ -25,7 +27,7 @@ async function build() {
       }
     }
   }
-  fs.rmSync("../python_template_cppjswasm/extension", {
+  fs.rmSync(EXTENSION, {
     recursive: true,
     force: true,
   });
@@ -45,8 +47,8 @@ async function build() {
   await Promise.all(BUNDLES.map(bundle)).catch(() => process.exit(1));
 
   // Copy servable assets to python extension (exclude esm/)
-  fs.mkdirSync("../python_template_cppjswasm/extension", { recursive: true });
-  await cpy("dist/**/*", "../python_template_cppjswasm/extension", {
+  fs.mkdirSync(EXTENSION, { recursive: true });
+  await cpy("dist/**/*", EXTENSION, {
     filter: (file) =>
       !file.relativePath.startsWith("esm/") &&
       !file.relativePath.startsWith("dist/esm/"),
